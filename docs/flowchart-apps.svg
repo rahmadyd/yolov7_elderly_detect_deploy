@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Flowchart YOLOv7 Elderly Detection Apps</title>
+  <desc id="desc">Diagram alur aplikasi frontend React, backend FastAPI, pipeline YOLOv7 ONNX, dan penyimpanan history CSV.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { fill: #0f172a; font: 800 44px Arial, sans-serif; }
+      .subtitle { fill: #475569; font: 500 20px Arial, sans-serif; }
+      .lane-title { fill: #0f172a; font: 800 24px Arial, sans-serif; }
+      .box-title { fill: #0f172a; font: 800 22px Arial, sans-serif; }
+      .box-text { fill: #475569; font: 500 16px Arial, sans-serif; }
+      .small { fill: #64748b; font: 700 13px Arial, sans-serif; letter-spacing: .08em; }
+      .pill-text { fill: #ffffff; font: 800 13px Arial, sans-serif; letter-spacing: .06em; }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; }
+      .lane { fill: #ffffff; stroke: #e2e8f0; stroke-width: 2; }
+      .blue { fill: #2563eb; }
+      .sky { fill: #0284c7; }
+      .emerald { fill: #059669; }
+      .amber { fill: #d97706; }
+      .violet { fill: #7c3aed; }
+      .rose { fill: #e11d48; }
+      .slate { fill: #334155; }
+      .icon-stroke { fill: none; stroke: #ffffff; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .icon-dark { fill: none; stroke: #0f172a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .flow { fill: none; stroke: #2563eb; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+      .flow2 { fill: none; stroke: #059669; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-green); }
+      .flow3 { fill: none; stroke: #64748b; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 10 10; marker-end: url(#arrow-gray); }
+      .label { fill: #1e293b; font: 800 14px Arial, sans-serif; }
+      .note { fill: #334155; font: 700 15px Arial, sans-serif; }
+      .shadow { filter: url(#shadow); }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1050"/>
+  <text x="80" y="82" class="title">Flowchart Aplikasi YOLOv7 Elderly Detection</text>
+  <text x="82" y="120" class="subtitle">Frontend React/Vite, Backend FastAPI, pipeline ONNX Runtime, dan tracking CSV</text>
+
+  <rect x="80" y="165" width="1440" height="230" rx="22" class="lane"/>
+  <rect x="80" y="425" width="1440" height="310" rx="22" class="lane"/>
+  <rect x="80" y="765" width="1440" height="190" rx="22" class="lane"/>
+
+  <text x="112" y="205" class="lane-title">1. Client / Frontend App</text>
+  <text x="112" y="465" class="lane-title">2. Backend API dan Inference App</text>
+  <text x="112" y="805" class="lane-title">3. Output, Storage, dan Developer Tools</text>
+
+  <!-- User -->
+  <g class="shadow">
+    <rect x="130" y="235" width="210" height="110" rx="18" class="card"/>
+    <circle cx="174" cy="290" r="29" class="slate"/>
+    <circle cx="174" cy="278" r="9" fill="#fff"/>
+    <path d="M156 307c7-15 29-15 36 0" class="icon-stroke"/>
+    <text x="220" y="279" class="box-title">User</text>
+    <text x="220" y="307" class="box-text">Pilih gambar</text>
+    <text x="220" y="329" class="box-text">untuk deteksi</text>
+  </g>
+
+  <!-- React Dashboard -->
+  <g class="shadow">
+    <rect x="430" y="220" width="280" height="140" rx="18" class="card"/>
+    <circle cx="483" cy="289" r="34" class="blue"/>
+    <ellipse cx="483" cy="289" rx="28" ry="10" class="icon-stroke"/>
+    <ellipse cx="483" cy="289" rx="28" ry="10" class="icon-stroke" transform="rotate(60 483 289)"/>
+    <ellipse cx="483" cy="289" rx="28" ry="10" class="icon-stroke" transform="rotate(120 483 289)"/>
+    <circle cx="483" cy="289" r="5" fill="#fff"/>
+    <text x="535" y="267" class="small">REACT + VITE</text>
+    <text x="535" y="296" class="box-title">Dashboard</text>
+    <text x="535" y="324" class="box-text">Preview, tombol Detect,</text>
+    <text x="535" y="346" class="box-text">hasil, dan tabel history</text>
+  </g>
+
+  <!-- Upload form -->
+  <g class="shadow">
+    <rect x="800" y="235" width="230" height="110" rx="18" class="card"/>
+    <circle cx="844" cy="290" r="29" class="sky"/>
+    <path d="M844 305V275M832 287l12-12 12 12M825 309h38" class="icon-stroke"/>
+    <text x="890" y="279" class="box-title">FormData</text>
+    <text x="890" y="307" class="box-text">File image/*</text>
+    <text x="890" y="329" class="box-text">via fetch()</text>
+  </g>
+
+  <!-- API -->
+  <g class="shadow">
+    <rect x="1120" y="220" width="300" height="140" rx="18" class="card"/>
+    <circle cx="1173" cy="289" r="34" class="emerald"/>
+    <path d="M1154 278h38M1154 300h38M1164 266v48M1182 266v48" class="icon-stroke"/>
+    <text x="1225" y="267" class="small">FASTAPI :8000</text>
+    <text x="1225" y="296" class="box-title">API Server</text>
+    <text x="1225" y="324" class="box-text">POST /detect/image</text>
+    <text x="1225" y="346" class="box-text">GET /history</text>
+  </g>
+
+  <!-- Pipeline decode/preprocess -->
+  <g class="shadow">
+    <rect x="165" y="500" width="250" height="140" rx="18" class="card"/>
+    <circle cx="218" cy="569" r="34" class="amber"/>
+    <rect x="199" y="550" width="38" height="38" rx="6" class="icon-stroke"/>
+    <path d="M204 580l9-11 8 8 6-7 10 12" class="icon-stroke"/>
+    <text x="270" y="548" class="small">OPENCV + NUMPY</text>
+    <text x="270" y="577" class="box-title">Decode &amp;</text>
+    <text x="270" y="602" class="box-title">Preprocess</text>
+    <text x="270" y="630" class="box-text">Resize 640, RGB, tensor</text>
+  </g>
+
+  <!-- ONNX model -->
+  <g class="shadow">
+    <rect x="505" y="500" width="250" height="140" rx="18" class="card"/>
+    <circle cx="558" cy="569" r="34" class="violet"/>
+    <path d="M545 546h21l14 14v32h-35zM565 546v15h15" class="icon-stroke"/>
+    <text x="610" y="548" class="small">MODEL FILE</text>
+    <text x="610" y="577" class="box-title">elderly.onnx</text>
+    <text x="610" y="605" class="box-text">Class: lansia, muda</text>
+    <text x="610" y="627" class="box-text">backend/onnx</text>
+  </g>
+
+  <!-- ONNX Runtime -->
+  <g class="shadow">
+    <rect x="845" y="500" width="250" height="140" rx="18" class="card"/>
+    <circle cx="898" cy="569" r="34" class="rose"/>
+    <rect x="878" y="549" width="40" height="40" rx="7" class="icon-stroke"/>
+    <path d="M866 559h12M866 579h12M918 559h12M918 579h12M888 537v12M908 537v12M888 589v12M908 589v12" class="icon-stroke"/>
+    <text x="950" y="548" class="small">CPU PROVIDER</text>
+    <text x="950" y="577" class="box-title">ONNX Runtime</text>
+    <text x="950" y="605" class="box-text">session.run()</text>
+    <text x="950" y="627" class="box-text">menghasilkan prediksi</text>
+  </g>
+
+  <!-- Postprocess -->
+  <g class="shadow">
+    <rect x="1185" y="500" width="250" height="140" rx="18" class="card"/>
+    <circle cx="1238" cy="569" r="34" class="emerald"/>
+    <rect x="1220" y="548" width="38" height="42" rx="5" class="icon-stroke"/>
+    <path d="M1212 560h18M1247 582h18M1228 538v18M1250 582v18" class="icon-stroke"/>
+    <text x="1290" y="548" class="small">POSTPROCESS</text>
+    <text x="1290" y="577" class="box-title">NMS &amp; Boxes</text>
+    <text x="1290" y="605" class="box-text">confidence, class_name,</text>
+    <text x="1290" y="627" class="box-text">box [x,y,w,h]</text>
+  </g>
+
+  <!-- Output dashboard -->
+  <g class="shadow">
+    <rect x="150" y="840" width="270" height="90" rx="18" class="card"/>
+    <circle cx="193" cy="885" r="27" class="blue"/>
+    <rect x="177" y="869" width="33" height="28" rx="4" class="icon-stroke"/>
+    <path d="M181 876h25M181 886h15" class="icon-stroke"/>
+    <text x="235" y="878" class="box-title">Response JSON</text>
+    <text x="235" y="906" class="box-text">ditampilkan di dashboard</text>
+  </g>
+
+  <!-- CSV -->
+  <g class="shadow">
+    <rect x="520" y="840" width="280" height="90" rx="18" class="card"/>
+    <circle cx="563" cy="885" r="27" class="amber"/>
+    <path d="M551 866h25l10 10v28h-35zM575 866v11h11M557 888h23M557 897h18" class="icon-stroke"/>
+    <text x="605" y="878" class="box-title">detections.csv</text>
+    <text x="605" y="906" class="box-text">timestamp, file, class, conf, box</text>
+  </g>
+
+  <!-- Swagger -->
+  <g class="shadow">
+    <rect x="900" y="840" width="250" height="90" rx="18" class="card"/>
+    <circle cx="943" cy="885" r="27" class="slate"/>
+    <path d="M927 872h32M927 883h32M927 894h22M920 872h1M920 883h1M920 894h1" class="icon-stroke"/>
+    <text x="985" y="878" class="box-title">Swagger UI</text>
+    <text x="985" y="906" class="box-text">http://localhost:8000/docs</text>
+  </g>
+
+  <!-- Launcher -->
+  <g class="shadow">
+    <rect x="1250" y="840" width="220" height="90" rx="18" class="card"/>
+    <circle cx="1293" cy="885" r="27" class="emerald"/>
+    <path d="M1278 876h30l-6 18h-24zM1283 870h12" class="icon-stroke"/>
+    <text x="1335" y="878" class="box-title">start-dev.ps1</text>
+    <text x="1335" y="906" class="box-text">jalankan FE + BE</text>
+  </g>
+
+  <!-- Main flows -->
+  <path d="M340 290H430" class="flow"/>
+  <path d="M710 290H800" class="flow"/>
+  <path d="M1030 290H1120" class="flow"/>
+  <path d="M1270 360v70c0 28-18 45-48 45H290c-42 0-62 18-62 25" class="flow"/>
+  <path d="M415 570H505" class="flow"/>
+  <path d="M755 570H845" class="flow"/>
+  <path d="M1095 570H1185" class="flow"/>
+  <path d="M1310 640v48c0 48-30 72-86 72H300c-52 0-76 28-76 80" class="flow2"/>
+  <path d="M1310 640v64c0 60-36 96-106 96H660c-80 0-100 20-100 40" class="flow2"/>
+  <path d="M800 885H900" class="flow3"/>
+  <path d="M1150 885H1250" class="flow3"/>
+
+  <!-- Labels -->
+  <rect x="737" y="262" width="86" height="26" rx="13" class="blue"/>
+  <text x="752" y="280" class="pill-text">UPLOAD</text>
+  <rect x="1048" y="262" width="104" height="26" rx="13" class="blue"/>
+  <text x="1062" y="280" class="pill-text">HTTP POST</text>
+  <rect x="430" y="542" width="76" height="26" rx="13" class="blue"/>
+  <text x="446" y="560" class="pill-text">TENSOR</text>
+  <rect x="770" y="542" width="76" height="26" rx="13" class="blue"/>
+  <text x="786" y="560" class="pill-text">MODEL</text>
+  <rect x="1106" y="542" width="82" height="26" rx="13" class="blue"/>
+  <text x="1122" y="560" class="pill-text">OUTPUT</text>
+  <rect x="338" y="742" width="94" height="26" rx="13" class="emerald"/>
+  <text x="354" y="760" class="pill-text">RENDER</text>
+  <rect x="746" y="742" width="88" height="26" rx="13" class="emerald"/>
+  <text x="760" y="760" class="pill-text">SAVE</text>
+
+  <!-- Footer note -->
+  <rect x="80" y="980" width="1440" height="1" fill="#cbd5e1"/>
+  <text x="82" y="1015" class="note">Ringkasnya: user upload gambar di React dashboard, FastAPI memproses file lewat YOLOv7 ONNX, hasil bounding box dikirim balik dan metadata disimpan ke CSV.</text>
+</svg>
