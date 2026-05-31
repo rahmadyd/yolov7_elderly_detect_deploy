@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual env / Conda
+venv/
+.venv/
+env/
+.env/
+conda-meta/
+
+# Environment variables
+.env
+.env.local
+
+# FastAPI / logs
+*.log
+
+# Model files besar
+*.pt
+*.onnx
+*.engine
+*.torchscript.pt
+*.torchscript.ptl
+
+# Detection outputs / testing artifacts
+backend/onnx/runs/
+backend/onnx/run/
+backend/api/history/*.csv
+uploads/
+outputs/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+node_modules/
+dist/
+build/
+
+# Vite / npm
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
